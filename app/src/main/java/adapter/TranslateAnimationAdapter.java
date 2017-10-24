@@ -95,8 +95,6 @@ public class TranslateAnimationAdapter extends RecyclerView.Adapter<RecyclerView
                         } else {
                             leftAnimation();
                         }
-                    }else{
-                       Toast.makeText(context, "Both are not present", Toast.LENGTH_SHORT).show();
                     }
                 }
             });
@@ -188,6 +186,12 @@ public class TranslateAnimationAdapter extends RecyclerView.Adapter<RecyclerView
             if (!countries.get(getAdapterPosition()).isBothNotPresent
                     && (System.currentTimeMillis() > (previousClickedTime + GAP_BETWEEN_CLICKS))) {
                 return true;
+            }
+            if(!countries.get(getAdapterPosition()).isBothNotPresent){
+                Toast.makeText(context, "Both are not present", Toast.LENGTH_SHORT).show();
+            }
+            if(System.currentTimeMillis() > (previousClickedTime + GAP_BETWEEN_CLICKS)){
+                Toast.makeText(context, "Clicked really fast", Toast.LENGTH_SHORT).show();
             }
             return false;
         }
