@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_marginBottom="10dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/inner_layout"
+        android:layout_width="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_height="100dp"
+        android:layout_gravity="end"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/z_layout"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            android:layout_toLeftOf="@+id/swiggy_layout"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="22dp">
+
+            <ImageView
+                android:id="@+id/zomato_icon"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="12dp"
+                android:src="@drawable/zomato_macro_logo" />
+
+            <TextView
+                android:id="@+id/z_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/zomato_icon"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:text="Zomato"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/swiggy_layout"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="22dp">
+
+            <ImageView
+                android:id="@+id/swiggy_icon"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="12dp"
+                android:src="@drawable/swiggy_macro_logo" />
+
+            <TextView
+                android:id="@+id/s_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/swiggy_icon"
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                android:text="Swiggy"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/outer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/card_shadow"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="22dp"
+            android:orientation="horizontal"
+            android:paddingRight="24dp">
+
+            <ImageView
+                android:id="@+id/address_placeholder_img"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="12dp"
+                android:src="@drawable/ic_home_icon" />
+
+            <TextView
+                android:id="@+id/tv_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="20dp"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="@string/about_akosha_text1"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/outer_layout_hack"
+        android:layout_width="180dp"
+        android:layout_height="100dp" />
+
+</FrameLayout>
